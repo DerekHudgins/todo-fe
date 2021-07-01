@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.completed {
+  text-decoration: line-through;
+}
+.not-completed{
+  cursor: pointer;
+  transition: all .2s ease-in-out
+}

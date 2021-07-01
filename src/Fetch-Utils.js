@@ -36,7 +36,10 @@ export async function addTodo(name, token) {
     const data = await request
         .post(`${URL}/api/todo`)
         .send({
-            todo: '',
+            todo: name,
+            completed: false
+            
+
             
         })
         .set('Authorization', token)

@@ -20,6 +20,7 @@ export default class TodoPage extends Component {
         e.preventDefault();
         await addTodo(this.state.name, this.props.token);
         await this.doFetch()
+        console.log(this.state.todos)
     }
 
     handleNameChange = e => {
@@ -48,7 +49,7 @@ export default class TodoPage extends Component {
                                 await this.doFetch()
                             }}
                             >
-                            {todo.name}
+                            {todo.todo}
                         </p>)
                     }
                 </div>
