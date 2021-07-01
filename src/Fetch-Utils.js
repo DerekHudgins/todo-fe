@@ -15,7 +15,7 @@ export async function signup(email, password) {
 
 export async function login(email, password) {
     const data = await request
-    .post(`${URL}/auth/signup`)
+    .post(`${URL}/auth/signin`)
     .send({
         email: email,
         password: password,

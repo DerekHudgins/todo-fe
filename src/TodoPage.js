@@ -33,7 +33,7 @@ export default class TodoPage extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        name
+                        I need to...
                         <input onChange={this.handleNameChange}/>
                     </label>
                     <button>Add a Todo</button>
@@ -42,7 +42,9 @@ export default class TodoPage extends Component {
                     {
                         this.state.todos.map(todo => 
                         <p 
-                            className={ todo.completed ? 'completed' : 'not-completed'}
+                            className={ todo.completed 
+                                ? 'completed' 
+                                : 'not-completed'}
                             key={`${todo.name}${todo.id}`} 
                             onClick={async () => {
                                 await completeTodo(todo.id, this.props.token)

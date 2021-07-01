@@ -39,6 +39,7 @@ export default class App extends Component {
             <Link to='/login'>Login</Link> 
             <Link to='/signup'>Signup</Link> 
             <Link to='/todos'>Todos</Link> 
+            <button onClick={this.logout}>Logout</button>
           </div>
           <Switch>
             <Route
